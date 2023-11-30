@@ -1,0 +1,259 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap");
+html {
+  box-sizing: border-box;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  height: 100%;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: Inter;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1340px;
+  padding: 70px;
+  margin: 0 auto;
+}
+
+.main__content-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.main__content-heading {
+  margin: 0;
+  color: #000;
+  font-size: 30px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.main__content-link {
+  color: #1D93FF;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.main__content-table {
+  margin-top: 36px;
+  display: flex;
+  gap: 30px;
+}
+
+.filter__heading {
+  color: #000;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin: 0;
+}
+
+.filter__form-search {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__form-label {
+  color: #000;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 10px;
+  margin-top: 18px;
+}
+
+.filter__form-search-input {
+  border-radius: 8px;
+  border: 1px solid #CED4DA;
+  width: 300px;
+  padding: 8px 20px;
+  align-items: center;
+  flex: 1 0 0;
+}
+
+.filter__form-mark {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__form-mark-input {
+  width: 134px;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: 1px solid #CED4DA;
+}
+
+.filter__form-mark-input:not(:last-child) {
+  margin-right: 27px;
+}
+
+.filter__form-sort {
+  display: flex;
+  flex-direction: column;
+}
+
+.filter__form-sort-selector {
+  display: flex;
+  width: 300px;
+  padding: 8px 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1 0 0;
+  border-radius: 8px;
+  border: 1px solid #CED4DA;
+  margin-bottom: 18px;
+}
+
+.lists__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 32px;
+}
+
+.lists__heading {
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  flex-grow: 1;
+  margin: 0;
+}
+
+.lists__header-parag-count {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+  margin-right: 20px;
+}
+
+.lists__header-parag-mark {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0;
+}
+
+.lists__table {
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.lists__table-head {
+  border-bottom: 1px solid #000;
+}
+
+th {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 10px;
+}
+
+td {
+  color: #000;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 10px;
+}
+
+tr {
+  height: 65px;
+}
+
+tbody tr:nth-child(odd) {
+  border-bottom: 1px solid #DEE2E6;
+  background-color: #F2F2F2;
+}
+
+.lists__table-body-status {
+  color: #309E3A;
+  font-family: Inter;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.lists__table-head-id {
+  width: 100px;
+}
+
+.lists__table-head-name {
+  width: 310px;
+}
+
+.lists__table-head-mark-date {
+  width: 191px;
+}
+
+.lists__table-head-mark {
+  width: 100px;
+}
+
+.lists__table-head-status {
+  width: 100px;
+}
+
+.lists__table-head-edit {
+  width: 100px;
+}
+
+.lists__table-head-del {
+  width: 76px;
+}
+
+.site-button {
+  border: none;
+  margin: 0;
+  color: #FFF;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  width: 300px;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  background-color: #1D93FF;
+}/*# sourceMappingURL=style.css.map */

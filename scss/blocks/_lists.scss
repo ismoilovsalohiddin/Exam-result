@@ -1,0 +1,106 @@
+.lists {
+}
+.lists__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 32px;
+}
+.lists__heading {
+    color: #000;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+    flex-grow: 1;
+    margin: 0;
+}
+.lists__header-parag-count {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;  
+    margin: 0;
+    margin-right: 20px;
+
+}
+.lists__header-parag-mark {
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; 
+    margin: 0;   
+}
+.lists__table {
+    border-collapse: collapse;
+    text-align: left;
+}
+.lists__table-head {
+    border-bottom: 1px solid #000;
+}
+.lists__table-body {
+}
+
+th{
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;    
+    padding: 10px;
+}
+
+td{
+    color: #000;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;   
+    padding: 10px; 
+}
+
+tr{
+    height: 65px;
+}
+
+tbody tr:nth-child(odd){
+    border-bottom: 1px solid #DEE2E6;
+    background-color: #F2F2F2;    
+}
+
+.lists__table-body-status{
+    color: #309E3A;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;    
+}
+
+.lists__table-head-id {
+    width: 100px;  
+}
+.lists__table-head-name {
+    width: 310px;
+}
+.lists__table-head-mark-date {
+    width: 191px;
+}
+.lists__table-head-mark {
+    width: 100px;
+}
+.lists__table-head-status {
+    width: 100px;
+}
+.lists__table-head-edit {
+    width: 100px;
+}
+.lists__table-head-del {
+    width: 76px;
+}

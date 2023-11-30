@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exam result</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <main class="main">
+        <div class="container">
+            <div class="main__content">
+                <div class="main__content-header">
+                    <h1 class="main__content-heading">Exam results</h1>
+                    <a href="#" class="main__content-link">Add new student +</a>
+                </div>
+                <div class="main__content-table">
+                    <div class="filter">
+                        <h2 class="filter__heading">ilter</h2>
+                        <form action="#" class="filter__form">
+                            <div class="filter__form-search">
+                                <label for="search-input" class="filter__form-label">Search</label>
+                                <input id="search-input" type="text" class="filter__form-search-input" placeholder="Falonchi">
+                            </div>
+                            <div class="filter__form-mark">
+                                <label for="mark-input" class="filter__form-label">Mark</label>
+                                <div class="filter__form-mark-wrapp">
+                                    <input id="mark-input" type="number" class="filter__form-mark-input" placeholder="From">
+                                    <input id="mark-input1" type="number" class="filter__form-mark-input" placeholder="To">
+                                </div>
+                            </div>
+                            <div class="filter__form-sort">
+                                <label for="sort" class="filter__form-label">Sort by</label>
+                                <select class="filter__form-sort-selector" name="sort" id="sort">
+                                    <option selected disabled value="name">Name</option>
+                                    <option value="asadbek">Asadbek</option>
+                                </select>
+                            </div>
+                            <button class="site-button">Filter</button>
+                        </form>            
+                    </div>
+                    <div class="lists">    
+                        <div class="lists__header">
+                            <h2 class="lists__heading">Students list</h2>
+                            <p class="lists__header-parag-count">Count: 4</p>
+                            <p class="lists__header-parag-mark">Average mark: 65%</p>
+                        </div>
+                        <table class="lists__table">
+                            <thead class="lists__table-head">
+                                <tr>
+                                    <th class="lists__table-head-id">Id</th>
+                                    <th class="lists__table-head-name">Name & Lastname</th>
+                                    <th class="lists__table-head-mark-date">Marked date</th>
+                                    <th class="lists__table-head-mark">Mark</th>
+                                    <th class="lists__table-head-status">Status</th>
+                                    <th class="lists__table-head-edit">Edit</th>
+                                    <th class="lists__table-head-del">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody class="lists__table-body">
+                                <!-- <tr>
+                                    <td>100</td>
+                                    <td>Ibrohimjon Alimuhammedov</td>
+                                    <td>05.12.2021 05:00</td>
+                                    <td>94%</td>
+                                    <td class="lists__table-body-status">Pass</td>
+                                    <td><img src="img/edit.svg" alt="icon"></td>
+                                    <td><img src="img/delete.svg" alt="icon"></td>
+                                </tr> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>

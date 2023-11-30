@@ -1,0 +1,30 @@
+.main {
+}
+.main__content {
+}
+.main__content-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main__content-heading {
+    margin: 0;
+    color: #000;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;    
+}
+.main__content-link {
+    color: #1D93FF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;   
+    text-decoration: none; 
+}
+.main__content-table{
+    margin-top: 36px;
+    display: flex;
+    gap: 30px;
+}
