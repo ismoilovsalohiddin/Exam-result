@@ -16,24 +16,25 @@
                 </div>
                 <div class="main__content-table">
                     <div class="filter">
-                        <h2 class="filter__heading">ilter</h2>
+                        <h2 class="filter__heading">Filter</h2>
                         <form action="#" class="filter__form">
                             <div class="filter__form-search">
                                 <label for="search-input" class="filter__form-label">Search</label>
-                                <input id="search-input" type="text" class="filter__form-search-input" placeholder="Falonchi">
+                                <input id="search-input" type="text" class="filter__form-search-input js--input-name" placeholder="Falonchi">
                             </div>
                             <div class="filter__form-mark">
                                 <label for="mark-input" class="filter__form-label">Mark</label>
                                 <div class="filter__form-mark-wrapp">
-                                    <input id="mark-input" type="number" class="filter__form-mark-input" placeholder="From">
-                                    <input id="mark-input1" type="number" class="filter__form-mark-input" placeholder="To">
+                                    <input id="mark-input" type="number" class="filter__form-mark-input js--input-from" placeholder="From">
+                                    <input id="mark-input" type="number" class="filter__form-mark-input js--input-to" placeholder="To">
                                 </div>
                             </div>
                             <div class="filter__form-sort">
                                 <label for="sort" class="filter__form-label">Sort by</label>
                                 <select class="filter__form-sort-selector" name="sort" id="sort">
-                                    <option selected disabled value="name">Name</option>
-                                    <option value="asadbek">Asadbek</option>
+                                    <option disabled selected value="Name">Name</option>
+                                    <option value="A-Z">A-Z</option>
+                                    <option value="Z-A">Z-A</option>
                                 </select>
                             </div>
                             <button class="site-button">Filter</button>
@@ -58,15 +59,6 @@
                                 </tr>
                             </thead>
                             <tbody class="lists__table-body">
-                                <!-- <tr>
-                                    <td>100</td>
-                                    <td>Ibrohimjon Alimuhammedov</td>
-                                    <td>05.12.2021 05:00</td>
-                                    <td>94%</td>
-                                    <td class="lists__table-body-status">Pass</td>
-                                    <td><img src="img/edit.svg" alt="icon"></td>
-                                    <td><img src="img/delete.svg" alt="icon"></td>
-                                </tr> -->
                             </tbody>
                         </table>
                     </div>
@@ -74,6 +66,45 @@
             </div>
         </div>
     </main>
+    <div class="modal">
+        <div class="modal__content">
+            <div class="modal__header">
+                <p class="modal__header-parag">Add student</p>
+                <button class="modal__header-button">
+                    <img src="img/close-btn.svg" alt="icon">
+                </button>
+            </div>
+            <form action="#" class="modal__form">
+                <label for="student-name" class="modal__form-label">Name</label>
+                <input required id="student-name" type="text" class="modal__form-input-name" placeholder="Falonchi">
+                
+                <label for="student-surname" class="modal__form-label">Lastname</label>
+                <input required id student-surname type="text" class="modal__form-input-surname" placeholder="Pismadonchi">
+                
+                <label for="student-mark" class="modal__form-label">Mark</label>
+                <input maxlength="3" required id="student-mark" type="number" class="modal__form-input-mark" placeholder="Mark">
+                
+                <button class="site-button js--modal-btn">Add student</button>
+            </form>
+        </div>
+    </div>
+    <template class="template">
+        <tr class="lists__table-body-tr">
+            <td class="id">100</td>
+            <td class="name">Ibrohimjon Alimuhammedov</td>
+            <td class="markedDate">05.12.2021 05:00</td>
+            <td class="mark">94%</td>
+            <td class="lists__table-body-status status">Pass</td>
+            <td class="edit">
+                <button id="" class="button-edit">
+                    <img src="img/edit.svg" alt="icon"></td>
+                </button>
+            <td class="del">
+                <button id="" class="button-del">
+                    <img src="img/delete.svg" alt="icon"></td>
+                </button>
+        </tr>
+    </template>
     <script src="index.js"></script>
 </body>
 </html>

@@ -1,5 +1,9 @@
-.filter {
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
+
 .filter__heading {
     color: #000;
     font-size: 24px;
@@ -8,12 +12,12 @@
     line-height: normal;
     margin: 0;    
 }
-.filter__form {
-}
+
 .filter__form-search {
     display: flex;
     flex-direction: column;
 }
+
 .filter__form-label {
     color: #000;
     font-size: 18px;
@@ -23,31 +27,49 @@
     margin-bottom: 10px;  
     margin-top: 18px;  
 }
+
 .filter__form-search-input {
     border-radius: 8px;
     border: 1px solid #CED4DA;    
     width: 300px;
     padding: 8px 20px;
     align-items: center;
+    color: #6C757D;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;    
     flex: 1 0 0;    
 }
+
 .filter__form-mark {
     display: flex;
     flex-direction: column;
 }
+
 .filter__form-mark-input {
     width: 134px;
     padding: 8px 20px;
     border-radius: 8px;
-    border: 1px solid #CED4DA;        
+    border: 1px solid #CED4DA;   
+    color: #6C757D;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;         
 }
+
 .filter__form-mark-input:not(:last-child){
     margin-right: 27px;
 }
+
 .filter__form-sort{
     display: flex;
     flex-direction: column;
 }
+
 .filter__form-sort-selector{
     display: flex;
     width: 300px;
@@ -57,5 +79,11 @@
     flex: 1 0 0;
     border-radius: 8px;
     border: 1px solid #CED4DA;
-    margin-bottom: 18px;        
+    margin-bottom: 18px;     
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;       
 }
