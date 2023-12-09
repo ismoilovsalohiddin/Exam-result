@@ -1,4 +1,4 @@
-const students = [
+let students = [
     {
       id: 100,
       name: "Nurmuhammad",
@@ -86,6 +86,7 @@ const students = [
   
   
   function render (param1){
+    elTableBody.innerHTML = ""
     const elFragment = document.createDocumentFragment()
     param1.forEach(function(item){
       const clonedTr = elTemplate.cloneNode(true)
@@ -102,14 +103,13 @@ const students = [
       }
       clonedTr.querySelector(".edit").src = "img/edit.svg"
       clonedTr.querySelector(".del").src = "img/delete.svg"
-      const btnEdit = clonedTr.querySelector(".button-edit")
-      btnEdit.id = item.id 
+      clonedTr.querySelector(".edit").id = item.id
+      clonedTr.querySelector(".del").id = item.id
       elFragment.appendChild(clonedTr)
     })
     elTableBody.appendChild(elFragment)
   }
-  
-  console.log()
+
   function myEl(tagName, attributeValue, className, textContent){
       const newEl = document.createElement(tagName || "div")
       if(attributeValue && className){
@@ -122,11 +122,10 @@ const students = [
       return newEl;
     }  
   
-  const elAddLink = document.querySelector(".main__content-link")
-  
-  const elModal = document.querySelector(".modal")
-  const elModalHeaderBtn = document.querySelector(".modal__header-button")
-  const elModalBtn = document.querySelector(".js--modal-btn")
+const elAddLink = document.querySelector(".main__content-link")  
+const elModal = document.querySelector(".modal")
+const elModalHeaderBtn = document.querySelector(".modal__header-button")
+const elModalBtn = document.querySelector(".js--modal-btn")
   
 elAddLink.addEventListener("click", function(){
   elModal.classList.toggle("js--open")
@@ -148,26 +147,18 @@ const elInputFrom = document.querySelector(".js--input-from")
 const elInputTo = document.querySelector(".js--input-to")
 
 
-filterForm.addEventListener("change", function(){
-  elTableBody.textContent = ""
+filterForm.addEventListener("submit", function(){
   const filterStudent = students.filter(function(item){
-    if(item.name.includes(elInputSearch.value)){
+    if(item.name.includes(elInputSearch.value) ){
       return item
     }
-  })
-  render(filterStudent)
-})
-
-filterForm.addEventListener("submit", function(){
-  elTableBody.textContent = ""
-  const filterStudent = students.filter(function(item){
     if(item.mark >= elInputFrom.value && item.mark <= elInputTo.value){
       return item
     }
   })
   render(filterStudent)
 })
-render(students)
+
 
 // ADD STUDENT
 const elModalForm = document.querySelector(".modal__form")
@@ -176,7 +167,9 @@ const elModalInputSurname = document.querySelector(".modal__form-input-surname")
 const elModalInputMark = document.querySelector(".modal__form-input-mark")
 
 
-elModalForm.addEventListener("submit", function(){
+elModalForm.addEventListener("submit", function(event){
+  event.preventDefault
+  elModalForm.value === null
   const currentDate = new Date().toISOString()
   const clonedTr = elTemplate.cloneNode(true)
   let id = students[4].id++
@@ -197,6 +190,7 @@ elModalForm.addEventListener("submit", function(){
     status.style.color = "red"
   }
   clonedTr.querySelector(".button-edit").id = id
+  clonedTr.querySelector(".button-del").id = id
   clonedTr.querySelector(".edit").src = "img/edit.svg"
 
   clonedTr.querySelector(".del").src = "img/delete.svg"  
@@ -207,19 +201,26 @@ elModalForm.addEventListener("submit", function(){
   elModal.classList.toggle("js--open")
 })
 
-// EDIT
+ // DELETE-EDIT
 
-const elBtnEdit = elTableBody.querySelectorAll(".button-edit")
-
-elBtnEdit.forEach((item) => {
-  item.addEventListener("click", function(){
-    elModal.classList.toggle("js--open")
-    elModal.querySelector(".modal__header-parag").textContent = "Edit"
-    elModalBtn.textContent = "Edit"
-
-  })
+const elModalEdit = document.querySelector(".modal--edit")
+const elEditBtn = document.querySelector(".edit-header-btn")
+const elModalHeader = elModal.querySelector(".modal__header-parag")
+elTableBody.addEventListener("click", (event) => {
+    if(event.target.closest(".del")){
+      students = students.filter(student => student.id !== Number(event.target.id))
+      render(students)
+    }
+    if(event.target.matches(".edit")){
+      elModal.classList.toggle("js--open")
+      elModalHeader.textContent = "Edit"
+      elModalBtn.textContent = "Edit"
+      students.filter((student) =>{
+        elModalInputName.value = student.name
+        elModalInputSurname.value = student.lastName
+        elModalInputMark.value = student.mark
+      })
+    }
 })
 
-
-console.log(elBtnEdit)
-console.log(elTableBody)
+render(students)

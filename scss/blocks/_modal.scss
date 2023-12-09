@@ -87,6 +87,13 @@
     margin-bottom: 24px;   
 }
 
+.modal--edit{
+    display: none;
+}
+
+.modal--edit.js--open{
+    display: block;
+}
 .modal.js--open{
     display: block;
 }
